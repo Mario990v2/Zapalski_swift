@@ -14,13 +14,14 @@ struct Card: View {
     }
     var body: some View {
         let baza = RoundedRectangle(cornerRadius: 12)
+        let baza2 = RoundedRectangle(cornerRadius: 12)
         
     
             Group{
                 ZStack{
                     baza.fill(.white)
-                    baza.frame(height: 80)
-                    baza.overlay(RoundedRectangle(cornerRadius: 12)
+                        .frame(height: 80)
+                        .overlay(RoundedRectangle(cornerRadius: 12)
                         .stroke(.green,lineWidth: 2)
                     )
                     .onTapGesture {
@@ -28,8 +29,8 @@ struct Card: View {
                     }
                     Text(buzka).font(.largeTitle)
                     
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(.green)
+//                    RoundedRectangle(cornerRadius: 12)
+                        baza2.fill(.green)
                         .frame(height: 80)
                         .opacity(czyZakryta ? 1 : 0)
                         .onTapGesture {
